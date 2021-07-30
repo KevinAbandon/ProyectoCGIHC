@@ -37,6 +37,27 @@ GLFWmonitor* monitors;
 
 void getResolution(void);
 
+
+int max_steps = 1000;
+
+void animacionGato1(void);
+int estadoGato1 = 0,
+pataEstado1 = 0;
+float gatoPos1 = 0.0f,
+gatoRot1 = 0.0f,
+gato1rot1 = 0.0f,
+gato1rot2 = 0.0f;
+
+
+void animacionGato2(void);
+int estadoGato2 = 1,
+pataEstado2 = 0;
+float gatoPos2 = 0.0f,
+gatoRot2 = 0.0f,
+gato2rot1 = 0.0f,
+gato2rot2 = 0.0f;
+
+
 // camera
 Camera camera(glm::vec3(0.0f, 10.0f, 90.0f));
 float MovementSpeed = 0.1f;
@@ -57,10 +78,6 @@ glm::vec3 lightDirection(0.0f, -1.0f, 1.0f);
 // posiciones
 //float x = 0.0f;
 //float y = 0.0f;
-float	movAuto_x = 0.0f,
-movAuto_z = 0.0f,
-orienta = 0.0f,
-giroLlantas = 0.0f;
 
 //Keyframes (Manipulación y dibujo)
 float	posX = 0.0f,
@@ -94,7 +111,7 @@ typedef struct _frame
 
 FRAME KeyFrame[MAX_FRAMES];
 int FrameIndex = 0;			//introducir datos
-bool play = false;
+bool play = true;
 int playIndex = 0;
 
 void saveFrame(void)
@@ -140,7 +157,10 @@ void interpolation(void)
 
 void animate(void)
 {
-	if (play){}
+	if (play){
+		animacionGato1();
+		animacionGato2();
+	}
 }
 
 void getResolution()
@@ -226,6 +246,11 @@ int main()
 	
 	//Model piso("resources/objects/piso/tentativa_escenario1.obj");
 	Model piso("resources/escenario1/escenario1.obj");
+	Model gatotronco("resources/objects/gato/tronco.obj");
+	Model patadelder("resources/objects/gato/patadelder.obj");
+	Model patadelizq("resources/objects/gato/patadelizq.obj");
+	Model patatrasder("resources/objects/gato/patatrasder.obj");
+	Model patatrasizq("resources/objects/gato/patatrasizq.obj");
 
 	ModelAnim taunt("resources/objects/Taunt/Taunt.dae");
 	taunt.initShaders(animShader.ID);
@@ -337,6 +362,103 @@ int main()
 		model = glm::scale(model, glm::vec3(200.0f));
 		staticShader.setMat4("model", model);
 		piso.Draw(staticShader);
+
+		// -------------------------------------------------------------------------------------------------------------------------
+		// Gato 1
+		// -------------------------------------------------------------------------------------------------------------------------
+
+
+		model = glm::translate(glm::mat4(1.0f), glm::vec3(-700.0f, 0, gatoPos1));
+		model = glm::translate(model, glm::vec3(posX, posY, posZ));
+		tmp = model = glm::rotate(model, glm::radians(gatoRot1), glm::vec3(0.0f, 1.0f, 0.0));
+		model = glm::scale(model, glm::vec3(20.0f, 20.0f, 20.0f));
+		staticShader.setMat4("model", model);
+		gatotronco.Draw(staticShader);
+
+		//Pierna Der
+		model = glm::translate(tmp, glm::vec3(0.0f, 0.0f, 0.1f));
+		model = glm::rotate(model, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0));
+		model = glm::rotate(model, glm::radians(gato1rot1), glm::vec3(1.0f, 0.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(20.0f, 20.0f, 20.0f));
+		staticShader.setMat4("model", model);
+		patatrasder.Draw(staticShader);
+
+		
+		//Pierna Izq
+		model = glm::translate(tmp, glm::vec3(0.0f, 0.0f, 0.0f));
+		model = glm::rotate(model, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::rotate(model, glm::radians(gato1rot2), glm::vec3(1.0f, 0.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(20.0f, 20.0f, 20.0f));
+		staticShader.setMat4("model", model);
+		patatrasizq.Draw(staticShader);
+
+		
+		//Brazo derecho
+		model = glm::translate(tmp, glm::vec3(0.0f, 0.0f, 0.0f));
+		model = glm::translate(model, glm::vec3(-0.75f, 2.5f, 0));
+		model = glm::rotate(model, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::rotate(model, glm::radians(gato1rot1), glm::vec3(1.0f, 0.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(20.0f, 20.0f, 20.0f));
+		staticShader.setMat4("model", model);
+		patadelder.Draw(staticShader);
+
+		//Brazo izquierdo
+		model = glm::translate(tmp, glm::vec3(0.0f, 0.0f, 0.0f));
+		model = glm::translate(model, glm::vec3(0.75f, 2.5f, 0));
+		model = glm::rotate(model, glm::radians(0.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+		model = glm::rotate(model, glm::radians(gato1rot2), glm::vec3(1.0f, 0.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(20.0f, 20.0f, 20.0f));
+		staticShader.setMat4("model", model);
+		patadelizq.Draw(staticShader);
+
+
+		// -------------------------------------------------------------------------------------------------------------------------
+		// Gato 2
+		// -------------------------------------------------------------------------------------------------------------------------
+
+
+		model = glm::translate(glm::mat4(1.0f), glm::vec3(680.0f, 0, gatoPos2));
+		model = glm::translate(model, glm::vec3(posX, posY, posZ));
+		tmp = model = glm::rotate(model, glm::radians(gatoRot2), glm::vec3(0.0f, 1.0f, 0.0));
+		model = glm::scale(model, glm::vec3(20.0f, 20.0f, 20.0f));
+		staticShader.setMat4("model", model);
+		gatotronco.Draw(staticShader);
+
+		//Pierna Der
+		model = glm::translate(tmp, glm::vec3(0.0f, 0.0f, 0.1f));
+		model = glm::rotate(model, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0));
+		model = glm::rotate(model, glm::radians(gato2rot1), glm::vec3(1.0f, 0.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(20.0f, 20.0f, 20.0f));
+		staticShader.setMat4("model", model);
+		patatrasder.Draw(staticShader);
+
+
+		//Pierna Izq
+		model = glm::translate(tmp, glm::vec3(0.0f, 0.0f, 0.0f));
+		model = glm::rotate(model, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::rotate(model, glm::radians(gato2rot2), glm::vec3(1.0f, 0.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(20.0f, 20.0f, 20.0f));
+		staticShader.setMat4("model", model);
+		patatrasizq.Draw(staticShader);
+
+
+		//Brazo derecho
+		model = glm::translate(tmp, glm::vec3(0.0f, 0.0f, 0.0f));
+		model = glm::translate(model, glm::vec3(-0.75f, 2.5f, 0));
+		model = glm::rotate(model, glm::radians(0.0f), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::rotate(model, glm::radians(gato2rot1), glm::vec3(1.0f, 0.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(20.0f, 20.0f, 20.0f));
+		staticShader.setMat4("model", model);
+		patadelder.Draw(staticShader);
+
+		//Brazo izquierdo
+		model = glm::translate(tmp, glm::vec3(0.0f, 0.0f, 0.0f));
+		model = glm::translate(model, glm::vec3(0.75f, 2.5f, 0));
+		model = glm::rotate(model, glm::radians(0.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+		model = glm::rotate(model, glm::radians(gato2rot2), glm::vec3(1.0f, 0.0f, 0.0f));
+		model = glm::scale(model, glm::vec3(20.0f, 20.0f, 20.0f));
+		staticShader.setMat4("model", model);
+		patadelizq.Draw(staticShader);
 
 	
 		// -------------------------------------------------------------------------------------------------------------------------
@@ -470,4 +592,66 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos)
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 {
 	camera.ProcessMouseScroll(yoffset);
+}
+
+void animacionGato1() {
+	if (estadoGato1 == 0) {
+		gatoPos1 += 1.0f;
+		if (gatoPos1 >= 500) {
+			gatoRot1 = 180;
+			estadoGato1 = 1;
+		}
+	}
+	else {
+		gatoPos1 -= 1.0f;
+		if (gatoPos1 <= -500) {
+			gatoRot1 = 0;
+			estadoGato1 = 0;
+		}
+	}
+	if (pataEstado1 == 0){
+		gato1rot1 += 1;
+		gato1rot2 = -1 * gato1rot1;
+		if (gato1rot1 >= 80){
+			pataEstado1 = 1;
+		}
+	}
+	else {
+		gato1rot1 -= 1;
+		gato1rot2 = -1 * gato1rot1;
+		if (gato1rot1 <= -80) {
+			pataEstado1 = 0;
+		}
+	}
+}
+
+void animacionGato2() {
+	if (estadoGato2 == 0) {
+		gatoPos2 += 1.0f;
+		if (gatoPos2 >= 500) {
+			gatoRot2 = 180;
+			estadoGato2 = 1;
+		}
+	}
+	else {
+		gatoPos2 -= 1.0f;
+		if (gatoPos2 <= -500) {
+			gatoRot2 = 0;
+			estadoGato2 = 0;
+		}
+	}
+	if (pataEstado2 == 0) {
+		gato2rot1 += 1;
+		gato2rot2 = -1 * gato2rot1;
+		if (gato1rot1 >= 80) {
+			pataEstado1 = 1;
+		}
+	}
+	else {
+		gato2rot1 -= 1;
+		gato2rot2 = -1 * gato2rot1;
+		if (gato2rot1 <= -80) {
+			pataEstado1 = 0;
+		}
+	}
 }
