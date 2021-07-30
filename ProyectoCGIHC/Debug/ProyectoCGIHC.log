@@ -2,18 +2,18 @@
 C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\include\shader_m.h(44,40): warning C4101: 'e': variable local sin referencia
 C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\include\modelAnim.h(104,44): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
 C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\include\modelAnim.h(520,24): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(454,11): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
 C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(455,11): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(459,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(456,11): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
 C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(460,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(462,10): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(461,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
 C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(463,10): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(471,28): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
-glfw3.lib(context.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(context.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(464,10): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(472,28): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+glfw3.lib(context.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(context.obj)' o en 'C:\Users\aband\Desktop\ProyectoCGIHC_VS\Debug\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
 glfw3.lib(init.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(init.obj)' o en 'C:\Users\aband\Desktop\ProyectoCGIHC_VS\Debug\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
 glfw3.lib(input.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(input.obj)' o en 'C:\Users\aband\Desktop\ProyectoCGIHC_VS\Debug\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
 glfw3.lib(monitor.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(monitor.obj)' o en 'C:\Users\aband\Desktop\ProyectoCGIHC_VS\Debug\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-glfw3.lib(vulkan.obj) : warning LNK4099: no se encontró PDB '' con 'glfw3.lib(vulkan.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+glfw3.lib(vulkan.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(vulkan.obj)' o en 'C:\Users\aband\Desktop\ProyectoCGIHC_VS\Debug\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
 glfw3.lib(window.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(window.obj)' o en 'C:\Users\aband\Desktop\ProyectoCGIHC_VS\Debug\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
 glfw3.lib(win32_init.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(win32_init.obj)' o en 'C:\Users\aband\Desktop\ProyectoCGIHC_VS\Debug\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
 glfw3.lib(win32_joystick.obj) : warning LNK4099: no se encontró PDB 'glfw.pdb' con 'glfw3.lib(win32_joystick.obj)' o en 'C:\Users\aband\Desktop\ProyectoCGIHC_VS\Debug\glfw.pdb'; se vinculará el objeto sin tener en cuenta información de depuración

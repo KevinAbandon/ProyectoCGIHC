@@ -51,7 +51,7 @@ double	deltaTime = 0.0f,
 lastFrame = 0.0f;
 
 //Lighting
-glm::vec3 lightPosition(0.0f, 4.0f, -10.0f);
+glm::vec3 lightPosition(0.0f, 700.0f, -50.0f);
 glm::vec3 lightDirection(0.0f, -1.0f, 1.0f);
 
 // posiciones
@@ -224,7 +224,8 @@ int main()
 	// load models
 	// -----------
 	
-	Model piso("resources/objects/piso/tentativa_escenario1.obj");
+	//Model piso("resources/objects/piso/tentativa_escenario1.obj");
+	Model piso("resources/escenario1/escenario1.obj");
 
 	ModelAnim taunt("resources/objects/Taunt/Taunt.dae");
 	taunt.initShaders(animShader.ID);
@@ -267,8 +268,8 @@ int main()
 		//Setup Advanced Lights
 		staticShader.setVec3("viewPos", camera.Position);
 		staticShader.setVec3("dirLight.direction", lightDirection);
-		staticShader.setVec3("dirLight.ambient", glm::vec3(0.0f, 0.0f, 0.0f));
-		staticShader.setVec3("dirLight.diffuse", glm::vec3(1.0f, 1.0f, 1.0f));
+		staticShader.setVec3("dirLight.ambient", glm::vec3(1.0f, 1.0f, 1.0f));
+		staticShader.setVec3("dirLight.diffuse", glm::vec3(0.2f, 0.0f, 1.0f));
 		staticShader.setVec3("dirLight.specular", glm::vec3(0.0f, 0.0f, 0.0f));
 
 		staticShader.setVec3("pointLight[0].position", lightPosition);
@@ -277,7 +278,7 @@ int main()
 		staticShader.setVec3("pointLight[0].specular", glm::vec3(0.0f, 0.0f, 0.0f));
 		staticShader.setFloat("pointLight[0].constant", 0.000008f);
 		staticShader.setFloat("pointLight[0].linear", 0.000009f);
-		staticShader.setFloat("pointLight[0].quadratic", 0.0032f);
+		staticShader.setFloat("pointLight[0].quadratic", 0.002f);
 
 		staticShader.setVec3("pointLight[1].position", glm::vec3(-80.0, 0.0f, 0.0f));
 		staticShader.setVec3("pointLight[1].ambient", glm::vec3(1.0f, 1.0f, 1.0f));
