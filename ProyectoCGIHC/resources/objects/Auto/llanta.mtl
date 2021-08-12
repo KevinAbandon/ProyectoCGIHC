@@ -1,0 +1,49 @@
+# Blender MTL File: 'auto.blend'
+# Material Count: 4
+
+newmtl BrakeCaliper
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.443406 0.443406 0.443406
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd BrakeCaliper_color.jpg
+
+newmtl Brake_Disc
+Ns 692.646691
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd Brake_Disc_color.jpg
+map_Ns Brake_Disc_roughness.jpg
+refl Brake_Disc_metallic.jpg
+
+newmtl RimMaterial
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump WatanabeRim_normal.jpg
+map_Kd WatanabeRim_color.jpg
+refl WatanabeRim_metallic.jpg
+
+newmtl TireMaterial
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2

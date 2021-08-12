@@ -2,11 +2,14 @@
 C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\include\shader_m.h(44,40): warning C4101: 'e': variable local sin referencia
 C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\include\modelAnim.h(104,44): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
 C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\include\modelAnim.h(520,24): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(577,11): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(578,11): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(582,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(583,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(585,10): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(586,10): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(594,28): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(709,20): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(710,21): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(711,21): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(766,11): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(767,11): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(771,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(772,16): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(774,10): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(775,10): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\aband\Desktop\ProyectoCGIHC_VS\ProyectoCGIHC\main.cpp(783,28): warning C4244: 'argumento': conversión de 'double' a 'float'; posible pérdida de datos
   ProyectoCGIHC.vcxproj -> C:\Users\aband\Desktop\ProyectoCGIHC_VS\Debug\ProyectoCGIHC.exe
